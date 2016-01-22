@@ -1,5 +1,5 @@
 angular.module('baztan')
-  .controller('NewFestaCtrl', function ($scope, $state, $meteor) {
+  .controller('NewChatCtrl', function ($scope, $state, $meteor) {
   $scope.$meteorSubscribe('users').then(function () {
     $scope.users = $scope.$meteorCollection(function () {
       return Meteor.users.find({ _id: { $ne: Meteor.userId() } });
